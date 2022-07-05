@@ -1,0 +1,50 @@
+﻿@model WildCoast
+@{
+    ViewBag.Title = "Edit Wild Coast Sez Investors";
+    Layout = "_AdminLyout";
+}
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="InvestorID" />
+    <div class="form-group">
+
+        <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+        
+    </div>
+    <div class="form-group">
+
+        <label asp-for="Lease"></label>
+            <input asp-for="Lease" class="form-control" />
+      
+    </div>
+    <div class="form-group">
+
+        <label asp-for="Asset"></label>
+            <input asp-for="Asset" class="form-control" />
+       
+    </div>
+    <div class="form-group">
+
+        <label asp-for="InvestmentValue"></label>
+            <input asp-for="InvestmentValue" class="form-control" />
+        
+    </div>
+    <div class="form-group">
+
+        <label asp-for="TeamMembers"></label>
+            <input asp-for="TeamMembers" class="form-control" />
+       
+    </div>
+    <div class="form-group">
+
+        <label asp-for="Status"></label>
+            <input asp-for="Status" class="form-control" />
+        
+    </div>
+    <div class="text-center">
+        <button class="btn btn-secondary  btn-lg   " type="submit">Save</button>
+        <a asp-action="Index" class="btn btn-outline-secondary btn-lg ">Cancel</a>
+    </div>
+
+</form>

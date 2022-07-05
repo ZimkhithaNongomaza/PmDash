@@ -1,0 +1,76 @@
+﻿<style>
+.bottomright{
+    position:absolute;
+    bottom:8px;
+    right:16px;
+    font-size:40px;
+    font:bold;
+    
+}
+</style>
+
+<div class="card-deck">
+    <div class="card">
+        <a class="nav-link text-dark" asp-area="" asp-controller="AquaDevelopment" asp-action="List">
+
+
+            <div class="card-body">
+                <h5 class="card-title" style=" font-family: Georgia, serif;">AQUACULTURE DEVELOPMENT ZONE</h5>
+
+                <img src="~/Content/Images/water.png" class="float-md-none" />
+              
+            </div>
+
+        </a>
+        <div class="bottomright">   @await Component.InvokeAsync("Poco")</div>
+    </div>
+    <div class="card">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Desalination" asp-action="List">
+
+
+            <div class="card-body">
+                <h5 class="card-title" style=" font-family: Georgia, serif;">DESALINAZATION</h5>
+                <img src="~/Content/Images/desalination.png" class="float-md-none" />
+               
+            </div>
+
+        </a>
+        <div class="bottomright">  @await Component.InvokeAsync("Des")</div>
+    </div>
+
+    
+</div>
+<div></div><p></p><p></p>
+
+<div class="card-deck">
+    <div class="card">
+        <a class="nav-link text-dark" asp-area="" asp-controller="WildCoast" asp-action="List">
+
+
+            <div class="card-body">
+                <h5 class="card-title" style=" font-family: Georgia, serif;">WILD COAST SEZ</h5>    `
+                <img src="~/Content/Images/wild.png" class="float-md-none" />
+               
+            </div>
+
+        </a>
+        <div class="bottomright"> @await Component.InvokeAsync("Wild") </div>
+    </div>
+
+    <div class="card">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Other" asp-action="List">
+           
+
+            <div class="card-body">
+                <h5 class="card-title" style=" font-family: Georgia, serif;">OTHERS</h5>
+                <img src="~/Content/Images/other.png" class="float-md-none" />
+               
+            </div>
+         
+        </a>
+        <div class="bottomright">  @await Component.InvokeAsync("Other")</div>
+    </div>
+
+
+  
+</div>

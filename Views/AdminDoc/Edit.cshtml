@@ -1,0 +1,74 @@
+﻿@model Document
+@{
+    ViewBag.Title = "Edit Investors";
+    Layout = "_AdminLyout";
+}
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="DocumentID" />
+    <div class="form-group">
+
+        <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+        
+    </div>
+    <div class="form-group">
+
+        <label asp-for="Pdd"></label>
+            <input asp-for="Pdd" class="form-control" />
+        
+    </div>
+    <div class="form-group">
+
+        <label asp-for="BSA"></label>
+            <input asp-for="BSA" class="form-control" />
+       
+    </div>
+    <div class="form-group">
+
+        <label asp-for="Eq"></label>
+            <input asp-for="Eq" class="form-control" />
+     
+    </div>
+    <div class="form-group">
+
+        <label asp-for="FundingApproval"></label>
+            <input asp-for="FundingApproval" class="form-control" />
+      
+    </div>
+    <div class="form-group">
+
+        <label asp-for="Investment"></label>
+            <input asp-for="Investment" class="form-control" />
+       
+    </div>
+    <div class="form-group">
+
+        <label asp-for="FeesAgreement"></label>
+            <input asp-for="FeesAgreement" class="form-control" />
+        
+    </div>
+    <div class="form-group">
+
+        <label asp-for="Prc"></label>
+            <input asp-for="Prc" class="form-control" />
+        
+    </div>
+    <div class="form-group">
+
+        <label asp-for="Exma"></label>
+            <input asp-for="Exma" class="form-control" />
+       
+    </div>
+    <div class="form-group">
+
+        <label asp-for="Converted"></label>
+            <input asp-for="Converted" class="form-control" />
+        
+    </div>
+    <div class="text-center">
+        <button class="btn btn-secondary  btn-lg    " type="submit">Save</button>
+        <a asp-action="Index" class="btn btn-outline-secondary btn-lg ">Cancel</a>
+    </div>
+
+</form>

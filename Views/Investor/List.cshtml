@@ -1,0 +1,83 @@
+﻿@model InvestorListViewModel
+            
+                <table class="table table-bordered table table-striped" >
+                    <thead>
+                        <tr>
+                            <th class="text-left">Investor</th>
+                            <th class="text-left">Lease</th>
+                            <th class="text-right">Asset</th>
+                            <th class="text-left">Investment Value</th>
+                            <th class="text-left">Team</th>
+                            <th class="text-left">Status</th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody>
+                        @foreach (var i in Model.Investors)
+
+                        {
+                            if (i.TeamMembers == "Somandla")
+                            {
+
+                                <tr>
+                                    <td>@i.Name</td>
+                                    <td>@i.Lease</td>
+                                    <td>@i.Asset</td>
+                                    <td>@i.InvestmentValue.ToString("c")</td>
+
+                                    <td>   <a asp-controller="Team" asp-action="Somandla">     @i.TeamMembers  </a></td>
+
+                                    <td>@i.Status</td>
+
+
+
+
+                                </tr>
+
+                            }
+                            if (i.TeamMembers == "Ubuntu")
+                            {
+                                <tr>
+                                    <td>@i.Name</td>
+                                    <td>@i.Lease</td>
+                                    <td>@i.Asset</td>
+                                    <td>@i.InvestmentValue.ToString("c")</td>
+                                    <td>   <a asp-controller="Team" asp-action="Ubuntu">     @i.TeamMembers  </a></td>
+                                    <td>@i.Status</td>
+                                </tr>
+
+                            }
+                            if (i.TeamMembers == "Power Rangers")
+                            {
+                                <tr>
+                                    <td>@i.Name</td>
+                                    <td>@i.Lease</td>
+                                    <td>@i.Asset</td>
+                                    <td>@i.InvestmentValue.ToString("c")</td>
+                                    <td>   <a asp-controller="Team" asp-action="PowerRangers">     @i.TeamMembers  </a></td>
+                                    <td>@i.Status</td>
+                                </tr>
+
+                            }
+                            if (i.TeamMembers == "Diversity")
+                            {
+                                <tr>
+                                    <td>@i.Name</td>
+                                    <td>@i.Lease</td>
+                                    <td>@i.Asset</td>
+                                    <td>@i.InvestmentValue.ToString("c")</td>
+                                    <td>   <a asp-controller="Team" asp-action="Diversity">     @i.TeamMembers  </a></td>
+                                    <td>@i.Status</td>
+                                </tr>
+
+                            }
+
+
+
+                        }
+
+
+                    </tbody>
+                   
+                </table>
+            <div page-model="@Model.PagingInfo" page-action="List"></div>

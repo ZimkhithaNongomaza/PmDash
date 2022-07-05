@@ -1,0 +1,98 @@
+﻿
+<style>
+    /*3 columns side by side*/
+    .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+    }
+    /*Display the column below each other instead of side by sideon small screen */
+
+    /*add some shadows to ceate a card effect*/
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    /*some left and right padding inside the container*/
+    .container {
+        padding: 0 16px;
+    }
+        /*clear floats*/
+        .container::after, row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+    .title {
+        color: grey;
+    }
+
+    .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%
+    }
+
+        .button:hover {
+            background-color: #555;
+        }
+</style>
+
+<h1 style="color:black">
+    <b>Power Rangers</b>
+</h1>
+<p></p>
+
+
+
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <img src="~/Content/Images/zimkhitha.jpg" style="width:100%" />
+            <div class="container">
+                <h2>Nqabakazi Ndamase</h2>
+                <p class="title">Financial Advisor</p>
+                <p> Advices clients on investments, taxes and retirement</p>
+                <p>nqabakazi.ndamase@coega.co.za</p>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="~/Content/Images/siyanda.jpg" style="width:100%" />
+            <div class="container">
+                <h2>Siphumlile Tshuze</h2>
+                <p class="title">Electrical Engineer</p>
+                <p>  Applies the principles of electricity to develop electrical products and systems</p>
+                <p>Siphumlile.Tshuze@coega.co.za</p>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="~/Content/Images/nic.jpg" style="width:100%" />
+            <div class="container">
+                <h2>Nichole Peter</h2>
+                <p class="title"> Project Manager</p>
+                <p> Plans and designate project resources, monitors progress and keep takeholders informed the entire way</p>
+                <p>Nichole.Peter@coega.co.za</p>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>

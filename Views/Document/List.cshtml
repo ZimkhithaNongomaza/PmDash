@@ -1,0 +1,61 @@
+﻿@model InvestorListViewModel
+
+<table class="table table-bordered table table-striped">
+    <thead>
+        <tr>
+            <th class="text-left">Investor</th>
+            <th class="text-left">Due Diligence</th>
+            <th class="text-right">BSA</th>
+            <th class="text-left">EQ</th>
+            <th class="text-left">Funding Approval</th>
+            <th class="text-left"> CDC Investment</th>
+            <th class="text-left"> Fees Agreement</th>
+            <th class="text-left"> PRC</th>
+            <th class="text-left"> RMC</th>
+            <th class="text-left"> FRC</th>
+            <th class="text-left"> EXMA</th>
+            <th class="text-left"> Converted</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var i in Model.Documents)
+
+        {
+            <tr>
+                <td>@i.Name</td>
+                <td>@i.Pdd</td>
+                <td>@i.BSA</td>
+                <td>@i.Eq</td>
+                <td>@i.FundingApproval</td>
+                <td>@i.Investment</td>
+                <td>@i.FeesAgreement</td>
+                <td>@i.Prc</td>
+                <td>@i.Rmc</td>
+                <td>@i.Exma</td>
+                <td>@i.Converted</td>
+
+
+
+            </tr>
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+    </tbody>
+
+</table>
+<div page-model="@Model.PagingInfo" page-action="List"></div>
